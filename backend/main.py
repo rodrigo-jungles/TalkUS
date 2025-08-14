@@ -3,6 +3,7 @@ from typing import Annotated
 from fastapi.security import OAuth2PasswordRequestForm
 from datetime import timedelta
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
 import crud, models, schemas, security
@@ -11,6 +12,15 @@ from database import SessionLocal, engine
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+# Configurar CORS para permitir conexões do frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5175", "http://localhost:5173", "http://localhost:5174", "http://127.0.0.1:5175"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Dependência para obter a sessão do banco de dados
 def get_db():

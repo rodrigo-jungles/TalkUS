@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 
 # URL de Conexão com o Banco de Dados MySQL
 # Formato: "mysql+mysqlconnector://USUARIO:SENHA@HOST:PORTA/NOME_DO_BANCO"
-SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://root:@localhost:3306/TalkUS"
+SQLALCHEMY_DATABASE_URL = "mysql+mysqlconnector://root:@localhost:3306/talkus"
 
 # Cria o "motor" de conexão do SQLAlchemy
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
