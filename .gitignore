@@ -1,0 +1,42 @@
+# Arquivo .gitignore para o projeto de Chat Empresarial (Vue + FastAPI)
+
+### Python/FastAPI (Backend) ###
+# Ambiente virtual
+venv/
+*.venv
+env/
+# Arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+### Node/Vue (Frontend) ###
+# Pasta de dependências
+node_modules/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Arquivos de build
+dist/
+dist-ssr/
+.output/
+
+### Arquivos de Sistema Operacional ###
+.DS_Store
+Thumbs.db
+
+### Arquivos de IDEs e Editores ###
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+### Arquivos de Segredos e Configurações Locais ###
+# NUNCA envie suas senhas e chaves de API para o GitHub!
+.env
+*.env.local
